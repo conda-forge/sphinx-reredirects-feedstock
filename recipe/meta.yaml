@@ -1,5 +1,5 @@
 {% set name = "sphinx-reredirects" %}
-{% set version = "0.0.1" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 source:
   # NOTE : tarball has an underscore
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sphinx_reredirects-{{ version }}.tar.gz
-  sha256: 5d26f90ba478d93f701ef21f0d20415c6083394e491834328da6a3ba3ce449f9
+  sha256: 4519a45d316c921c46327b72fe410e1e7a32fe51694741296020b0ca008fbcee
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Handles redirects for moved pages in Sphinx documentation projects'
+  summary: Handles redirects for moved pages in Sphinx documentation projects
   doc_url: https://documatt.gitlab.io/sphinx-reredirects
   dev_url: https://gitlab.com/documatt/sphinx-reredirects
 
