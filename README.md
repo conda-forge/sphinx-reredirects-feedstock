@@ -1,11 +1,11 @@
-About sphinx-reredirects
-========================
+About sphinx-reredirects-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-reredirects-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gitlab.com/documatt/sphinx-reredirects
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-reredirects-feedstock/blob/main/LICENSE.txt)
 
 Summary: Handles redirects for moved pages in Sphinx documentation projects
 
