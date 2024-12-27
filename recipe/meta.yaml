@@ -7,20 +7,20 @@ package:
 
 source:
   # NOTE : tarball has an underscore
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sphinx_reredirects-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinx_reredirects-{{ version }}.tar.gz
   sha256: cfa753b441020a22708ce8eb17d4fd553a28fc87a609330092917ada2a6da0d8
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - sphinx
 
 test:
@@ -28,6 +28,7 @@ test:
     - sphinx_reredirects
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
