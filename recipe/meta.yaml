@@ -1,5 +1,6 @@
 {% set name = "sphinx-reredirects" %}
-{% set version = "0.1.6" %}
+{% set version = "1.0.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +9,7 @@ package:
 source:
   # NOTE : tarball has an underscore
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinx_reredirects-{{ version }}.tar.gz
-  sha256: c491cba545f67be9697508727818d8626626366245ae64456fe29f37e9bbea64
+  sha256: 7c9bada9f1330489fcf4c7297a2d6da2a49ca4877d3f42d1388ae1de1019bf5c
 
 build:
   noarch: python
@@ -19,9 +20,10 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - flit-core
   run:
     - python >={{ python_min }}
-    - sphinx
+    - sphinx >=7.4
 
 test:
   imports:
@@ -33,13 +35,12 @@ test:
     - pip check
 
 about:
-  home: https://gitlab.com/documatt/sphinx-reredirects
-  license: BSD-3-Clause
-  license_family: BSD
+  home: https://documatt.com/sphinx-reredirects
+  license: MIT
   license_file: LICENSE
   summary: Handles redirects for moved pages in Sphinx documentation projects
-  doc_url: https://documatt.gitlab.io/sphinx-reredirects
-  dev_url: https://gitlab.com/documatt/sphinx-reredirects
+  doc_url: https://documatt.com/sphinx-reredirects
+  dev_url: https://github.com/documatt/sphinx-reredirects
 
 extra:
   recipe-maintainers:
