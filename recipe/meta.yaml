@@ -1,5 +1,5 @@
 {% set name = "sphinx-reredirects" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   # NOTE : tarball has an underscore
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinx_reredirects-{{ version }}.tar.gz
-  sha256: 7c9bada9f1330489fcf4c7297a2d6da2a49ca4877d3f42d1388ae1de1019bf5c
+  sha256: fb9b195335ab14b43f8273287d0c7eeb637ba6c56c66581c11b47202f6718b29
 
 build:
   noarch: python
